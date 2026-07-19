@@ -1,6 +1,6 @@
 class Solution {
 public:
-
+// classic silding window approach !
     bool vowel(char n) {
         return n=='a'||n=='e'||n=='i'||n=='o'||n=='u';
     }
