@@ -2,10 +2,10 @@ class Solution {
 public:
         // Global declaration of ans vector
         vector<string> ans;
-        
 
     void solve(string& digits, int i, string& str, vector<string>& alphas) {
-        if(i == digits.size()) {
+        // Base - Case
+        if(i == digits.size()) { 
             ans.push_back(str);
             return;
         }
