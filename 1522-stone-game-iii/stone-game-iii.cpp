@@ -1,10 +1,13 @@
 class Solution {
 private:
     int solve(vector<int>& v, int idx, vector<int>& d) {
+        // base case 
         if(idx >= v.size())
             return 0;
+        // main logic RE: 
         if(d[idx] != INT_MIN)
             return d[idx];
+
         int sum = 0;
         int ans = INT_MIN;
         for(int i = idx; i < min((int)v.size(), idx + 3); i++) {
