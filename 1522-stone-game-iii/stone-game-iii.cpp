@@ -14,7 +14,6 @@ private:
         return d[idx] = ans;
     }
 
-
 public:
     string stoneGameIII(vector<int>& stoneValue) {
         int n = stoneValue.size();
