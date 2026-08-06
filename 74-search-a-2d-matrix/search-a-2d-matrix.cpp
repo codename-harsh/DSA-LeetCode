@@ -5,8 +5,7 @@ public:
             c = matrix[0].size();
         while (i <= j) {
             int mid = i + (j - i) / 2;
-            int row = mid / c, col = mid % c;
-            int v = matrix[row][col];
+            int v = matrix[mid / c][mid % c];
             if (v == target) {
                 return true;
             } else if (v > target)
