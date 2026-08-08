@@ -22,9 +22,9 @@ public:
                  ans[j++] = i;
                  f = false;
             }
-        }
         if(j == m) 
             return ans;
-        else return vector<int> {};
+        }
+        return vector<int> {};
     }
 };
