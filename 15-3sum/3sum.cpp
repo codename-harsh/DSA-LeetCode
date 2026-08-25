@@ -6,7 +6,7 @@ public:
         for(int i = 0; i < nums.size(); i++) {
             if(i > 0 && nums[i] == nums[i - 1])
                 continue;
-            int j = i + 1, k = nums.size() - 1;
+            int j = i + 1, k = nums.size() - 1; // j and k is left and right here 
             while(j < k) {
                 int s = nums[i] + nums[j] + nums[k];
                 if(s > 0){
