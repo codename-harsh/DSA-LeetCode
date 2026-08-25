@@ -6,7 +6,7 @@ public:
         for(int r = 0; r < nums.size(); r++) {
             p *= nums[r];
             while(p >= k) {
-                p /= nums[l];
+                p /= nums[l]; //Left se ek element nikal do
                 l++;
             }
             ans += r - l + 1;
