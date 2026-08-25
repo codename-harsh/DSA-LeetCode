@@ -1,16 +1,16 @@
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        int ans = 0, n = nums.size();
-        for(int i = 0; i < n; i++){
-            int sum = 0;
-            for(int j = i; j < n; j++) {
-                sum += nums[j];
-                if(sum == k) {
-                    ans++;
-                }
+        int sum = 0, c = 0;
+        unordered_map<int, int> dino;
+        dino[0] = 1;
+        for(int i = 0; i < nums.size(); i++) {
+            sum += nums[i];
+            if(dino.find(sum - k) != dino.end()) {
+                c += dino[sum - k];
             }
+            dino[sum]++;
         }
-        return ans;
+        return c;
     }
 };
