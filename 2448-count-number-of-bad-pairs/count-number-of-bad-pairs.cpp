@@ -8,7 +8,7 @@ public:
             gd += m[x];
             m[x]++;
         }
-        long long total = (long long)(nums.size() * (nums.size() -1) / 2);
+        long long total = (long long)(nums.size() * (nums.size() -1) >> 1);
         return total - gd;
     }
 
