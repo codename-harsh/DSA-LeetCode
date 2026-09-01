@@ -14,7 +14,7 @@ public:
             prefix = (prefix + nums[i]) % p;
             int target = (prefix - need + p) % p;
             if (mp.count(target)) 
-            res = min(res, i - mp[target]);
+                res = min(res, i - mp[target]);
             mp[prefix] = i;
         }
         return res == nums.size() ? -1 : res;
