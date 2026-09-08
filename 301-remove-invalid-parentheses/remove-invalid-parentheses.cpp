@@ -57,7 +57,6 @@ public:
    bool isValid(string s)
    {
        int c=0;
-       
        for(char ch:s)
        {
            if(ch=='(')
@@ -73,8 +72,7 @@ public:
    }
    
    vector<string> removeInvalidParentheses(string s) {
-       l=0;
-       r=0;
+       l=0, r=0;       
        vector<string> ans;
        countmin(s);
        removemin(s,l,r);
