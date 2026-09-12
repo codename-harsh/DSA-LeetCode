@@ -1,6 +1,6 @@
 class Solution {
 public:
-    //BIG POTATO STUFF MUHEHEHEHE
+    //BIG POTATO STUFF 
     string removeDuplicates(string s) {
         stack<char> st;
         for(const auto&x: s) {
