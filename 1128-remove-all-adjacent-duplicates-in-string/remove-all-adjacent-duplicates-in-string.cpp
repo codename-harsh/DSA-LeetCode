@@ -21,7 +21,7 @@ public:
     }
 
 
-    // SMALL POTATO STUFF (BASIC APPROACH)
+    // SMALL POTATO STUFF 
     
     // string removeDuplicates(string s) {
     //         int i = 0;
