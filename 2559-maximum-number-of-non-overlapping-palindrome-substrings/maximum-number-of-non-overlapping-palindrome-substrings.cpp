@@ -13,8 +13,7 @@ public:
             int l = r - k + 1; //size of the dynamic sliding window we gonna use 
             bool add = (l >= nxt && isPal(s, l, r)) || (l>nxt && isPal(s, l - 1, r));
             if(add) {
-            c += add;
-                nxt = r + 1;
+                c++, nxt = r + 1;
             }
         }
         return c;
