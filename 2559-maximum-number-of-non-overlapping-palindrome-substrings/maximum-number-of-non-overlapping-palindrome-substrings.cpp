@@ -1,6 +1,6 @@
 class Solution {
 private:
-    const bool isPal(string&s, int l, int r) {
+    inline const bool isPal(string&s, int l, int r) {
         for( ; l < r; l++, r--) {
             if(s[l] != s[r]) return false;
         } return true; //else true !
