@@ -11,13 +11,13 @@ public:
             if(basket[x - 'a']) {
                 continue;
             } 
-            while(!start.empty() && start.back() > x && f[start.back() - 'a'] > 0) {
+        while(!start.empty() && start.back() > x && f[start.back() - 'a'] > 0) {
                 basket[start.back() - 'a'] = false;
                 start.pop_back();
-}
-        start.push_back(x);
-        basket[x - 'a'] = true;
+    }
+            start.push_back(x);
+            basket[x - 'a'] = true;
         }
-        return start;
+            return start;
     }
 };
