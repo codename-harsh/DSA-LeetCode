@@ -5,11 +5,12 @@ public:
         for(auto&x: s) {
             if(x == ']') {
                 string w = "";
-                while(!st.empty() && !isdigit(st.top()[0])) {
+                while(!st.empty() && st.top() != "[") {
                     string tp = st.top();
-                    w += tp == "[" ? "" : tp;
+                    w += tp;
                      st.pop();
                 }
+                st.pop();
                 string v = ""; //Numeric string
                 while(!st.empty() && isdigit(st.top()[0])) {
                     v += st.top();
