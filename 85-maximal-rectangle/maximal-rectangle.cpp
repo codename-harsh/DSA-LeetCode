@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//we gonna use largest histogram's code as it is :)
         private: 
     vector<int> PrevSmallerIndex(vector<int>& heights) {
         stack<int> s; s.push(-1);
