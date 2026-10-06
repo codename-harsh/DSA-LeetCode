@@ -1,29 +1,13 @@
 class Solution {
 public:
     bool checkInclusion(string s1, string s2) {
-        if(s1.length() > s2.length())
-            return false;
-            unordered_map<char, int> a;
-            unordered_map<char, int> b;
-        
-        for(int i = 0; i < s1.length(); i++) {
-            a[s1[i]]++;
-            b[s2[i]]++;
-        }
-        if(a == b)
-            return true;
-        int l = 0;
-        for(int r = s1.length(); r < s2.length(); r++) {
-            b[s2[r]]++;
-            b[s2[l]]--;
-        if(b[s2[l]] == 0) {
-            b.erase(s2[l]);
-        }
-        l++;
-        if(a == b){
-            return true;
-        }
-            }
-        return false;
-    }
+	vector<int> cur(26), goal(26);
+	for(const auto&c : s1) goal[c - 'a']++;
+	for(int i = 0; i < s2.size(); i++) {
+		cur[s2[i] - 'a']++;
+		if(i >= s1.size()) cur[s2[i - s1.size()] - 'a']--;
+		if(goal == cur) return true;
+	}
+	return false;
+}
 };
