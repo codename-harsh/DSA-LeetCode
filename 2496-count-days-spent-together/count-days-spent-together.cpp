@@ -11,8 +11,8 @@ private:
 
 public:
     int countDaysTogether(string arriveAlice, string leaveAlice, string arriveBob, string leaveBob) {
-        int sa = getnumber(arriveAlice), sb = getnumber(arriveBob);
-        int ea = getnumber(leaveAlice), eb = getnumber(leaveBob);
+        const int sa = getnumber(arriveAlice), sb = getnumber(arriveBob);
+        const int ea = getnumber(leaveAlice), eb = getnumber(leaveBob);
         int shuru = max(sa, sb), khtm = min(ea, eb);
         return max(0, khtm - shuru + 1);
     }
