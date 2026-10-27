@@ -9,3 +9,7 @@ public:
         return g;
     }
 };
+/* why it is unique path ?
+    First row ke alawa kisi roq mein last col se pehle koi free cell na hai.
+    isliye neeche jane ka doosra rasta hi nahi bachta !
+*/
