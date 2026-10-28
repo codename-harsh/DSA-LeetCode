@@ -1,8 +1,8 @@
 class Solution {
 public:
-    int ans = INT_MAX;
-    vector<vector<vector<bool>>> vis;
-
+        int ans = INT_MAX;
+        vector<vector<vector<bool>>> vis;
+        
     void solve(vector<vector<int>>& grid, int i, int j, int x) {
         int m = grid.size(), n = grid[0].size();
         x ^= grid[i][j];
