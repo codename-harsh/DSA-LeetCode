@@ -1,6 +1,5 @@
 class Solution {
-    void solve(TreeNode* root, int targetSum, vector<vector<int>>& ans,
-               vector<int>& co) {
+    void solve(TreeNode* root, int targetSum, vector<vector<int>>& ans, vector<int>& co) {
         if (!root) {
             return;
         }
