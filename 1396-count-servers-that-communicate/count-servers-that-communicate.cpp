@@ -5,7 +5,8 @@ public:
         vector<int> r(m), c(n);
         for(int i = 0; i < m; ++i) 
             for(int j = 0; j < n; ++j) 
-                if(grid[i][j]) r[i]++, c[j]++;
+                if(grid[i][j]) 
+                    r[i]++, c[j]++;
         for(int i = 0; i< m; ++i)
             for(int j = 0; j < n; ++j)
                 if(grid[i][j] && (r[i] > 1 || c[j] >  1))
