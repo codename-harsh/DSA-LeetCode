@@ -7,6 +7,6 @@ public:
             f = f->next->next;
             if(f == s)  return true;
         }
-        return false;
+        return 0;
     }
 };
