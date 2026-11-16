@@ -1,18 +1,16 @@
 class Solution {
 public:
+    bool flag = true;
     int height(TreeNode* root) {
-        if(root == 0)   return 0;
+        if(!root)   return 0;
         int l = height(root->left), r = height(root->right);
-        return 1 + max(l, r);
+        //check condn
+        if(flag && abs(l - r) > 1) 
+            flag = false;
+        return max(l, r) + 1;
     }
     bool isBalanced(TreeNode* root) {
-        if(root == nullptr) return 1;
-        int l = height(root->left), r = height(root->right);
-        int diff = abs(l - r);
-        bool ans1 = (diff <= 1);
-        //RE
-        bool lans = isBalanced(root->left), rans = isBalanced(root->right);
-        if(ans1 && lans && rans)    return true;
-        else return false;
+        height(root);
+        return flag;
     }
 };
