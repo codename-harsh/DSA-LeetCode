@@ -11,7 +11,7 @@ public:
         while(!q.empty()) {
             auto f = q.front(); q.pop();
             TreeNode*&node = f.first;
-            auto coord = f.second;
+            auto &coord = f.second;
             int&row = coord.first, &col = coord.second;
             mp[col][row].insert(node->val);
             if(node->left)
