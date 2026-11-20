@@ -7,8 +7,7 @@ public:
         for(; i <= j; ) {
             if(people[i]  + people[j] <= limit)
                 i++;
-            j--;
-            c++;
+            j--, c++;
         }
         return c;
     }
