@@ -11,8 +11,6 @@ public:
     }
     
     int getProduct(int k) {
-        ios::sync_with_stdio(false);
-        cin.tie(nullptr), cout.tie(0);
         int ans = 1, n = v.size();
         for(int i = n-k; i < n; ++i) ans *= v[i];
         return ans;
