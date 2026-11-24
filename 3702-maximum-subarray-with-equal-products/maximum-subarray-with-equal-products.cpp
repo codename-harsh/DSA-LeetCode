@@ -4,7 +4,6 @@ private:
         if(a == 0 || b == 0) return 0;
         return (a / gcd(a, b)) * b;
     }
-
     bool check(vector<int>& nums, int l, int r) {
         long long p = 1;
         int g = nums[l], lc = nums[l];
@@ -19,6 +18,8 @@ private:
 
 public:
     int maxLength(vector<int>& nums) {
+        ios::sync_with_stdio(false);
+        cin.tie(0), cout.tie(0);
         int ans = 0, n = nums.size();
         for(int i = 0; i < n; ++i) {
             for(int j = i; j < n; ++j) {
